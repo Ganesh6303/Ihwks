@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculate</title>
+   
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      body, div, form, input, select, p { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 16px;
+      color: #eee;
+      }
+      body {
+      
+      background-size: cover;
+      }
+      h1, h2 {
+      text-transform: uppercase;
+      font-weight: 400;
+		  text-align: center
+      }
+      h2 {
+      margin: 0 0 0 8px;
+      }
+      .main-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: 25px;
+      background: rgba(0, 0, 0, 0.5); 
+      }
+      .left-part, form {
+      padding: 25px;
+      }
+      .left-part {
+      text-align: center;
+      }
+      .fa-graduation-cap {
+      font-size: 72px;
+      }
+      form {
+      background: rgba(0, 0, 0, 0.7); 
+      }
+      .title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      }
+      .info {
+      display: flex;
+      flex-direction: column;
+      }
+      input, select {
+      padding: 5px;
+      margin-bottom: 30px;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #eee;
+      }
+      input::placeholder {
+      color: #eee;
+      }
+      option:focus {
+      border: none;
+      }
+      option {
+      background: black; 
+      border: none;
+      }
+  
+     
+   
+      .btn-item, button {
+      padding: 10px 5px;
+      margin-top: 20px;
+      border-radius: 5px; 
+      border: none;
+      background: #26a9e0; 
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 400;
+      color: #fff;
+      }
+      .btn-item {
+      display: inline-block;
+      margin: 20px 5px 0;
+      }
+      button {
+      width: 100%;
+      }
+      button:hover, .btn-item:hover {
+      background: #85d6de;
+      }
+      
+      html, body {
+      height: 100%;
+      }
+      .main-block {
+      flex-direction: row;
+      height: calc(100% - 50px);
+      }
+    
+    </style>
+	  <script type="text/javascript">
+	  function calcu()
+		  {
+		  alert("Java Script Run");
+			  var a1 = parseInt(document.getElementById(page).value);
+			  var copy = parseInt(document.getElementById(copy).value);
+			  var color = parseInt(document.getElementById(color).value);
+			  var size = parseInt(document.getElementById(size).value);
+			  var bind = parseInt(document.getElementById(bind).value);
+			
+			  
+			  var a=document.getElementById("a");
+			     a.value=a1;
+			
+			  
+			  
+			  
+		 }
+	  
+	  
+	  
+	  </script>
+  </head>
+  <body>
+    <div class="main-block">
+      
+      <form action="coon.php" method="post">
+        <div class="title"> 
+			<h2>Calculate here <br> xyxxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyxyx</h2>
+        </div>
+		  
+        <div class="info">
+          <input class="page" type="text" name="page" placeholder="Pages" id ="page">
+          <input type="text" name="copy" placeholder="Copy" id="copy">
+       
+          <select id="color" name="color">
+            <option value='0'>Black</option>
+		 <option value='1'>Green</option>
+		 <option value='2'>Blue</option>
+		 <option value='3'>Mehroon</option>   
+          </select>
+			  <select id="size" name="size">
+			 <option value='0'>A4</option>
+		    <option value='1'>A5</option>     
+			
+			</select>
+			
+			 <select name= "print" id="print">
+			<option value='3'>Black & White</option>
+		  <option value='10'>Full Color</option>      
+			</select>
+        </div>
+		   <select name="bind" id="bind">
+	 <option value='45'>Hard Binding (Rs.45)</option>
+	 <option value='90'>Hard Binding With Golden Print (Rs.90)</option>
+	 <option value='35'>Soft Binding Without Cover (Rs.35)</option>
+	 <option value='45'>Soft Binding With Cover(Rs.45)</option>
+	 <option value='20'>Spiral Binding(Rs.20)</option>
+	 <option value='45'>Spiral Binding With Cover (Rs.45)</option>                    
+		  </select>
+		  
+		   <select id="side" name="side">
+		  
+		   <option value='0'>Single Side</option>
+		   <option value='1'>Both Side</option> 
+         </select>
+		 
+		 
+		 
+		 
+        <button onclick="calcu()">Calculator</button>
+		
+ 
+		<div id ="calculator">
+		<br>
+		 Number of Pages : <output id="a"></output><br>
+		 Number of copies: <output id="copy"></output><br>
+		 File Color : <output id ="color"></output><br>
+		 Xerox : <output id ="xerox"></output><br>
+		 Bind Price : <output id ="bind"></output><br>
+		 Xerox Sides : <output id ="sides"></output><br>
+		 </div>
+		
+		 <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
